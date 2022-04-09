@@ -1,0 +1,374 @@
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.hero{
+  min-height: 100vh;
+  min-width: 100%;
+  background-image: url(../images/logo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/*Naviagtion bar styling*/
+.navbar{
+  background: rgba(86, 81, 121, 0.1);
+  backdrop-filter: blur(15px);
+  width: 0%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -50px;
+ overflow-y: auto;
+ padding: 2%;
+ text-align: center;
+ align-items: center;
+ z-index: 1;
+ overflow-x: hidden;
+ transition: 1s;
+}
+.navbar ul{
+  width: 100%;
+  margin-top: 80px;
+  list-style-type: none;
+}
+.navbar ul li{
+  position: relative;
+  cursor: pointer;
+}
+.navbar ul li a{
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+  color: white;
+  font-weight: bold;
+  padding: 5px 30px;
+  line-height: 60px;
+}
+.navbar ul li::after{
+content:'';
+width: 0%;
+height: 5px;
+background: #565179;
+display: block;
+margin: auto;
+transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 40%;
+}
+.navbar .closebtn{
+  display: block;
+  font-size: 30px;
+  margin-top: 3%;
+  position:absolute;
+  top: 0;
+  right: 30px;
+  color: white;
+  
+  }
+  .openbtn{
+    position: fixed;
+    z-index: 1;
+    margin: 2%;
+  }
+  .openbtn a{
+    color: white;
+  }
+   .openbtn .fa-bars{
+     position: absolute;
+     margin: 25px;
+    top: 0;
+    left: 0%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+    z-index: 1;
+  }
+  
+
+/*main-content styling*/
+.main-content{
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+}
+section{
+  min-height: 500px;
+}
+/*section 1 styling*/
+
+.info h1{
+  text-align: center;
+  padding: 2%;
+  font-size: 3em;
+}
+.cur-cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cards{
+  margin: 5%;
+  width: 250px;
+  height: 300px;
+  position: relative;
+  transition: 0.5s;
+  background-color: white;
+}
+
+.overlay{
+  background-color:rgba(12, 12, 12, 0.7); 
+  position: absolute;
+  top: 260px;
+  width: 250px;
+  height: 40px;
+  overflow: hidden;
+  transition: all 1s ease-in-out .2s;
+  text-align: center;
+}
+.overlay h3{
+  padding: 4%;
+  color: white;
+}
+.overlay p{
+  color: white;
+}
+.overlay:hover{
+height: 300px;
+top: 0px;
+}
+
+/*Section 2 styliing slide show*/
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+.container h1{
+  text-align: center;
+  margin: 2%;
+  font-size: 3em;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 40%;
+  margin: 2% auto;
+}
+.mySlides img{
+  width: 100%;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/*section 3 styling*/
+
+.blank{
+  width: 100%;
+  height: 250px;
+}
+.info1{
+  text-align: center;
+}
+.info1 h1{
+margin: 2%;
+font-size: 3em;
+}
+
+.bk{
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color: black;
+  padding: 3%;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: darkgrey;
+  color: black;
+  transform: rotateY(180deg);
+  padding: 3%;
+}
+
+/*Footer Styling*/
+
+footer{
+  margin-top: 100px;
+  width: 100%;
+  padding: 50px 15%;
+  background-color: #333;
+  color: #efefef;
+  display: flex;
+}
+footer div{
+text-align: center;
+}
+.col-2{
+  flex-grow: 2;
+}
+footer div h3{
+font-weight: 300;
+margin-bottom: 30px;
+letter-spacing: 1px;
+}
+
+.col-1 a{
+  display: block;
+  text-decoration: none;
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.col-1 a:hover{
+  opacity: 0.7;
+}
+form input{
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+}
+form button{
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+form button:hover{
+  opacity: 0.7;
+}
+.fa {
+  padding: 20px;
+  font-size: 80px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+color: white;
+}
+
+.fa-youtube {
+  color: white;
+}
+
+.fa-instagram {
+  color: white;
+}
